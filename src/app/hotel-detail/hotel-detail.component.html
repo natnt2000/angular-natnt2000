@@ -1,0 +1,12 @@
+<h2>{{hotelData.name}}</h2>
+<img [src]="hotelData.logo" alt="" width="150">
+<br>
+<h3>{{hotelData.address}}, {{hotelData.country}}</h3>
+<br>
+<a [routerLink]="['../../edit-hotel', hotelData.id]">Edit</a> &nbsp;
+<button (click)="removeHotel()">Delete</button>
+<br>
+<h2>Danh sách các phòng của khách sạn <span style="color: red">{{hotelData.name}}</span></h2>
+<ul>
+  <li *ngFor="let room of rooms">{{room.name}}</li>
+</ul>
